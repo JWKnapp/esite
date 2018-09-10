@@ -1,0 +1,27 @@
+html,
+body {
+  display: flex;
+
+  font-family: 'Press Start 2P';
+}
+
+.greet {
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+.shop_window {
+  /* background: darkblue; */
+  color: white;
+  background-image: linear-gradient(rgb(138, 145, 238), darkblue);
+}
