@@ -56,8 +56,9 @@ ul {
   border: 2px solid rgb(128, 122, 122);
   border-radius: 14px;
   box-shadow: 0 0 0 3px rgb(228, 227, 227), 0 0 0 5px rgb(138, 136, 136);
-  margin: 1em;
+  margin: 0.6em;
   margin-right: 0.3em;
+  margin-left: 1em;
   margin-top: 0em;
   padding-top: 0em;
   padding-right: 0.5em;
@@ -105,7 +106,7 @@ li {
   border: 2px solid rgb(128, 122, 122);
   border-radius: 14px;
   box-shadow: 0 0 0 3px rgb(228, 227, 227), 0 0 0 5px rgb(138, 136, 136);
-  margin: 1em;
+  margin: 0.6em;
   margin-left: 0.3em;
   margin-top: 0em;
   /* padding: 0.25em;
@@ -135,4 +136,39 @@ li {
 
 .money_type {
   color: rgb(62, 226, 226);
+}
+
+/* .footer {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.footer_content {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-right: 0.6em;
+}
+
+.item_description {
+  flex-grow: 2;
+  border: 2px solid rgb(128, 122, 122);
+  border-radius: 14px;
+  box-shadow: 0 0 0 3px rgb(228, 227, 227), 0 0 0 5px rgb(138, 136, 136);
+  margin: 1em;
+  margin-left: 1em;
+  margin-top: 0em;
+  padding: 1em;
+  height: 1em;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  font-family: 'Press Start 2P';
+  text-shadow: 2px 2px black;
+  border: 2px solid rgb(128, 122, 122);
+  border-radius: 14px;
+  box-shadow: 0 0 0 3px rgb(228, 227, 227), 0 0 0 5px rgb(138, 136, 136);
+  margin-left: 1em;
+  height: 5em;
 }

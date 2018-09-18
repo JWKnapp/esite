@@ -5,9 +5,16 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const db = require('./db');
 const sessionStore = new SequelizeStore({ db });
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 const app = express();
 module.exports = app;
+const allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'json');
+
+  next();
+};
 
 const createApp = () => {
   // logging middleware
@@ -26,6 +33,8 @@ const createApp = () => {
       saveUninitialized: false,
     })
   );
+  // should allow cross domain access
+  app.use(allowCrossDomain);
 
   // api routes
   app.use('/api', require('./api'));
@@ -64,7 +73,7 @@ const startListening = () => {
   );
 };
 
-const syncDb = () => db.sync();
+const syncDb = () => db.sync({ force: true });
 
 async function bootApp() {
   await sessionStore.sync();

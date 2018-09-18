@@ -11,6 +11,9 @@ const Stock = db.define('stock', {
   price: {
     type: Sequelize.INTEGER,
   },
+  imgUrl: {
+    type: Sequelize.STRING,
+  },
 });
 
 module.exports = Stock;
